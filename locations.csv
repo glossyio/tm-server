@@ -1,0 +1,10 @@
+Column Name,ThingsBoard Field,Structure,Description
+createDate,,timestamp,Timestamp when row was created
+createUser,,UUID,Id of user who created this row
+updateDate,,timestamp,"Timestamp when the row was updated, or null"
+updateUser,,UUID,"Id of user who update this row, or null"
+textLocation,,text,Textual description of TM?s location
+geoLocation,,geography(point),"GPS latitude and longitude of TM using PostGIS ?point? data type, e.g. Portland OR is ?POINT(45.520247, -122.674194)"
+orientation,,text,"Direction the TM is facing, e.g. east, northeast, etc."
+effectiveDateTime,,timestamp,when the device was set up at that location
+expirationDateTime,,timestamp,when the device was no longer set up at that location/orientation
