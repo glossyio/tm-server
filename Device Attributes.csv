@@ -1,0 +1,20 @@
+Column Name,ThingsBoard Field,Structure,Description
+id,yes,"UUID, primary index","Unique permanent identifier, defined local to a ThingsBoard server"
+external id,yes,UUID,Identifies device when device profile is copied between ThingsBoard servers
+deviceName,yes,text,Name assigned to the TM
+provisionKey,yes,text,Identifies device during auto-provisioning. (We will use the RPI serial number).
+createDate,,timestamp,Timestamp when row was created
+createUser,,UUID,Id of user who created this row
+updateDate,,timestamp,"Timestamp when the row was updated, or null"
+updateUser,,UUID,"Id of user who update this row, or null"
+IPv4 address,,char(15),IP version 4 address of TM
+IPv6 address,,char(39),IP version 6 address of TM
+configuration,,Json,Frigate configuration in YAML format
+tmSoftwareVersion,,text,TM software version
+rpiOSVersion,,text,Raspberry Pi OS version
+tmHardwareVersion,,text,TM hardware version
+connectivity,,enum,"Identifies how the TM is connected to the Internet. One of: ""private LAN"", ""public LAN"", ""cellular"", ""LoRa wireless"", ""not connected"""
+contactName,,text,name of contact person(s) who help manage this TM
+contactPhone,,text,phone number of contact person(s)
+contactEmail,,text,email address of contact person(s)
+locations,,Json array,"see ""locations"" sheet"
